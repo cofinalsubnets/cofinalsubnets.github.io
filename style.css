@@ -1,10 +1,15 @@
-* { font-family: monospace,courier; line-height: 1.4em; }
-body { background: #fcf; }
-h1 { font-size: 1.4em; }
-h2 { font-size: 1.3em; }
-h3, h4 { font-size: 1.2em; }
-h5, h6 { font-size: 1.1em; }
-h1, h2, h3, h4, h5, h6 { margin: 0.7em auto; }
+body {
+  background: #fcf;
+  line-height: 1.4em;
+  font-family: 'Courier New', monospace, sans-serif; }
+
 a, a:visited { color: black; }
 a:hover { text-decoration: none; background-color: #dad; }
-li { list-style-type: '- '; }
+
+h1 { font-size: 1.4em; } h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; } h4 { font-size: 1.15em; }
+h5 { font-size: 1.1em; } h6 { font-size: 1.05em; }
+
+ul { padding-left: 1em; }
+ul > li { list-style: none; }
+ul > li:before { content: '- '; }
