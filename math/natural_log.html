@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>"natural" logarithm?</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <!-- twitter emoji icon from favicon.io -->
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+  <body>
+    <main class="paper">
+      <h1>"natural" logarithm?</h1>
+      <p>
+        what makes the natural logarithm "natural"? it's <em>not</em> the
+        fact that logarithms at other bases differ from natural logarithms
+        by a constant factor. a little algebra shows that if \( e \) has
+        this property, then so does every other base.
+      </p>
+      <p>
+        \[
+        \log_x n = \frac{\ln n}{\ln x}
+        \implies \frac{\log_x n}{\log_x y}
+        = \frac{\frac{\ln n}{\ln x}}{\frac{\ln y}{\ln x}}
+        = \frac{\ln n}{\ln y} = \log_y n
+        \]
+      </p>
+      <p>
+        natural logarithms are "natural" because they appear in contexts
+        that don't explicitly invoke \( e \), or even the concept of
+        exponentiation. the first of these is in the study of the
+        very simple differential equation \( \frac{dx}{dt} = x \).
+        swapping the denominator and integrating both sides gives
+      </p>
+      <p>
+        \[
+        \int_{x(0)}^{x(t)} \frac{\mathrm{d}x}{x} = \int_0^t \mathrm{d}t \implies \ln x = t \implies x = e^t
+        \]
+      </p>
+      <p>
+        which is your basic exponental growth formula.
+      </p>
+      <p>
+        buried in there is the fact that the natural logarithm is the
+        integral of \( \frac{1}{x} \), which to my mind gives the reason
+        to call them "natural": they can be calculated easily by taking the
+        area under the curve from 1 to the argument, which is approximated
+        well (for large numbers) by a prefix of the harmonic series. this
+        amounts to Riemann sum on the curve with partition width 1 and its
+        difference from the true integral is bounded by the Euler-Mascheroni
+        constant, which is a little over 0.577. the wonderful old-timey name
+        for this operation is "quadrature of the hyperbola" and it gives
+        another tantalizing hint about "where \( e \) comes from" that's
+        different from the usual limit of Bernoulli's compound interest
+        formula.
+      </p>
+    </main>
+  </body>
+</html>
