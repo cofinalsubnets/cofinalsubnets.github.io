@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>monoid homomorphisms are everywhere</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <!-- twitter emoji icon from favicon.io -->
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+  <body>
+    <main class="paper">
+      <h1>monoid homomorphisms are everywhere</h1>
+      <p>
+        a functor is a monoid homomorphism. if you understand what a group
+        homomorphism is, then you understand what a monoid homomorphism is
+        and what a functor is.
+      </p>
+      <p>
+        ok, there's a little more to say than that, because a category isn't
+        quite a monoid. a category is essentially a typed monoid, where the
+        types are given by the objects and determine which elements can be
+        composed with which other elements. so to be a functor, you need to
+        have some additional data that a "pure" monoid homomorphism doesn't
+        need to have, namely, how to map types from the source category to
+        the target.
+      </p>
+      <p>
+        but this extra data is necessary because of the formal requirements
+        of category theory. if you forget about the different objects of a
+        category by collapsing them into a single object, then you just have
+        a monoid, and functors into and out of this category are exactly
+        monoid homomorphisms. that's really the nub of the concept.
+      </p>
+      <p>
+        the other main detail i can think of is that one encounters covariant
+        and contravariant functors, but generally we don't use those terms when
+        talking about other kinds of homomorphisms. this is too bad, because if
+        we did, then we would see that inverting a group element is a contravariant
+        isomorphism. a monoid equipped with a contravariant isomorphism such that
+        identities yada yada, is a group.
+      </p>
+      <p>
+        since the rules for group and monoid homomorphisms are identical, and the
+        details about inverses follow from the group axioms, you might as well say
+        that group homomorphisms are just monoid homomorphisms too. plain old
+        elementary school multiplication? another example of a monoid homomorphism,
+        which in this case we call by the name "distributivity". literally any time
+        you have an object that you can write as a line of symbols that combine
+        piecewise with an associative binary operation, then transform it into
+        another object by separately transforming each symbol and recombining them
+        using another associative operation, in a way that respects identities,
+        then you have a monoid homomorphism! for programmers, this is essentially
+        any unfold-filter-map-fold type of thing.
+      </p>
+      <p>
+        the fundamental idea is of a transformation that acts "transparently" with
+        respect to some kind of composition. there's also an interesting "entropic"
+        character because of the requirement about respecting identities. this makes
+        it possible to remove elements from the sequence by mapping them to the
+        identity, but not to insert elements.
+      </p>
+      <p>
+        this bears on the topic of "natural transformations between functors". a
+        natural transformation is a map that postcomposes with a functor to
+        give another functor of the same type, hence why they're the arrows in
+        functor categories, where they act like those in the image of a covariant
+        hom functor. they are like "letters of the alphabet" of a certain class of
+        homomorphisms. so the question arises, which functors can be transformed
+        into which other functors? intuitively, the answer seems related to this
+        idea of "entropy": the more source structure a map forgets by sending it to the
+        identity, the fewer other maps it can "naturally" transform into. this is
+        analogous to losing cardinality from polymorphic (noninjective) functions
+        in \( \textbf{Set} \), when the sets in question are finite.
+      </p>
+      <p>
+        anyway, a concept this universal should have a better name than "monoid homomorphism",
+        don't you think? i semiseriously propose the Anglishization "sameforming". this
+        captures the idea that the line of symbols before and after the transformation
+        have the same basic shape. if you had gone through the same construction procedure
+        you used to create the first one, but substituted components according to the
+        sameforming, then you would have created another object with the "same form".
+      </p>
+    </main>
+    <footer><nav><ol>
+      <li><a href="./..">🛖</a></li>
+      <li><a href=".">🧮</a></li>
+      <li>🟰</li>
+    </ol></nav></footer>
+  </body>
+</html>
