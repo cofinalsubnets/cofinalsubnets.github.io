@@ -19,31 +19,18 @@
     <main class="paper">
       <h1>an algebraic set theory</h1>
       <p>
-        disclaimer 1: again, like it says on the index page, i'm not a real mathematician.
-        so take all of this with a grain of salt and assume there are mistakes.
-      </p>
-      <p>
-        disclaimer 2: there's nothing here that's really new or illuminating.
-        it's just a take on sets that i had one day and thought was interesting. this is just
-        for fun!
-      </p>
-      <p>
-        start with a collection of things. you can call them "elements" or "points" but they
-        aren't exactly the same as elements in traditional set theory. what they are is the
-        generators of a monoid. but each one corresponds to some object, which may itself be
-        a "set" in the sense 
+        start with a collection of everything possible. you can call them "elements" or
+        "points" but they aren't exactly the same as elements in traditional set theory,
+        although they are one-to-one with them.  what they are, is the generators of a
+        monoid.
       </p>
       <p>
         normally monoids are defined on top of sets, but since we don't have sets yet, we just
         say collection, or class if you prefer. by analogy to categories, which are called
         "small" if the underlying collections are proper sets, you can call this a "large"
         monoid if you want. if calling this thing a "monoid" seriously bothers you then just
-        wait, we'll get around it in a minute.
-      </p>
-      <p>
-        with respect to the top-level collection, it does no good to ask if any particular
-        thing is in it. anyway, we haven't even defined how to do that yet. but by definition,
-        as much is in it as possible.
+        wait, we'll get around it in a minute.  with respect to the top-level collection, by
+        definition, as much is in it as possible.
       </p>
       <p>
         out of this collection, one element is distinguished as the empty set. this
@@ -55,24 +42,22 @@
         allowed.
       </p>
       <p>
-        so now to recover the familiar set operations. union is just the
-        monoid operation, by which the set \( \{ 1, 2, 3 \} \) is constructed as
-        \( \{1\} \cup \{2\} \cup \{3\} \). we define intersection by defining a "functor
-        into \( \textbf{Set} \)" (i can sense the irony of using this concept when trying
-        to define sets, so sorry about that) that sends each generating element \( g \)
-        of the monoid (let's call it \( \text{S} \)) to the functor
-        (<a href="mono_homo.html">yes, functor</a>; just hang a second) that sends
-        generating elements \(h\) to
+        so now to recover the familiar set operations. union is just the monoid operation, by
+        which the set \( \{ 1, 2, 3 \} \) is constructed as \( \{1\} \cup \{2\} \cup \{3\} \).
+        we define intersection by defining a "functor into \( \textbf{Set} \)" (even though
+        we're redefining sets) that sends each generating element \( g \) of the monoid
+        (hereafter \( \text{S} \)) to the functor (<a href="mono_homo.html">yes, functor</a>)
+        sending generating elements \(h\) to
       </p>
       <p>
-      \begin{align}
-      h \mapsto h \space \text{if} \space g = h \space \text{else} \space \emptyset
-      \end{align}
+        \begin{align}
+        h \mapsto h \space \text{if} \space g = h \space \text{else} \space \emptyset
+        \end{align}
       </p>
       <p>
         and, since it's a functor, acts "transparently" through composite elements. also
         in mind that the element of \(\text{S}\) representing the singleton set of another set
-        is a generating element, even though it is "internally" composite.
+        is a generating element, even though it's "internally" composite.
       </p>
       <p>
         so each element \(s\) of \(\text{S}\) defines a unique monoid homomorphism that removes
@@ -83,26 +68,25 @@
         \(g\) to the "dual" functor sending generating elements \(h\) to
       </p>
       <p>
-      \begin{align}
-      h \mapsto \emptyset \space \text{if} \space g = h \space \text{else} \space h
-      \end{align}
+        \begin{align}
+        h \mapsto \emptyset \space \text{if} \space g = h \space \text{else} \space h
+        \end{align}
       </p>
       <p>
-        speaking of things that are "dual", i would expect that an isomorphic twin formulation,
-        where the monoid operation corresponds to intersection and the identity is the total set
-        rather than the null set, is also possible. in that case we could accomplish the
-        non-intrinsic operation between two sets by crossing over to the other representation
-        via complement and combining them there, which would be aesthetically nicer than defining
-        intersection as a "one-sided" endofunctor. maybe later!
+        an isomorphic twin formulation, where the monoid operation corresponds to intersection and
+        the identity is the total set rather than the null set, is also possible. in that case we
+        could accomplish the non-intrinsic operation between two sets by crossing over to the other
+        representation via complement and combining them there, which would be aesthetically nicer
+        than defining intersection as a "one-sided" endofunctor. maybe later!
       </p>
       <p>
         anyway, since we're calling these things functors we might as well go ahead and give this idea
-        the full categorical treatment, which is more technically correct anyway for the reason
-        mentioned above. the most basic way to do this is to say our monoid is now a single-object
-        category that i'll call \(\textbf{Setting}\) because, well, it's the setting. now we can
-        talk about functors comfortably and observe that set difference and intersection are
-        effectively families of forgetful endofunctors on \(\textbf{Setting}\) indexed one-to-one
-        by its morphisms.
+        the full categorical treatment, which is more technically correct anyway because a "monoid"
+        has an underlying set, classically speaking. the most basic way to do this is to say our monoid
+        is now a single-object category that i'll call \(\textbf{Setting}\) because, well, it's the
+        setting. now we can talk about functors comfortably and observe that set difference and
+        intersection are effectively families of forgetful endofunctors on \(\textbf{Setting}\) indexed
+        one-to-one by its morphisms.
       </p>
       <p>
         but single-object categories aren't that interesting. we can get more mileage out
@@ -152,6 +136,7 @@
       </p>
       <ul>
         <li>a set is a morphism in \(\textbf{Setting}\)</li>
+        <li>a set "is" union (in the dual formulation, intersection) with itself</li>
         <li>homsets are powersets of supersets: \(\textbf{Setting}(\bullet) = \wp(\bullet^\star)\)</li>
         <li>a relation \(\text{A}\to\text{B}\) is a morphism of \(\text{A} \times \text{B}\)</li>
         <li>(partial) functions of all sorts can be defined analogously</li>
@@ -174,7 +159,7 @@
     </main>
     <footer><nav><ol>
       <li><a href="./..">🛖</a></li>
-      <li><a href=".">🧮</a></li>
+      <li><a href=".">🪞</a></li>
       <li>✖️</li>
     </ol></nav></footer>
   </body>
