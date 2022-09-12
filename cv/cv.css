@@ -1,0 +1,51 @@
+
+      body {
+        background: #fcf;
+        line-height: 1.4em;
+        font-family: 'Courier New', monospace, sans-serif; }
+
+      a, a:visited { color: black; }
+      a:hover { text-decoration: none; background-color: #dde; }
+
+      h1 { font-size: 1.4em; } h2 { font-size: 1.3em; }
+      h3 { font-size: 1.2em; } h4 { font-size: 1.15em; }
+      h5 { font-size: 1.1em; } h6 { font-size: 1.05em; }
+
+      ul { padding-left: 1em; }
+      ul > li { list-style: none; }
+      ul > li:before { content: '- '; }
+
+      .paper, footer nav ol {
+        background: #eef;
+        box-shadow: 0.5em 0.5em 2px 1px rgba(0, 0, 0, .1); }
+      .paper {
+        margin: 1em auto;
+        padding: 3em;
+        max-width: 48em; }
+
+      .paper > h1:first-child { margin-top: 0px; }
+
+      footer nav {
+        padding: 0em;
+        margin: 0em auto;
+        text-align: center; }
+
+      footer nav ol {
+        margin: 0em auto;
+        padding: 1em;
+        list-style-type: none;
+        display: inline-block; }
+
+      footer nav ol li {
+        font-size: 1.4em;
+        display: inline-block; }
+      footer nav a { text-decoration: none; }
+      footer nav a:hover { background-color: #eef; }
+      footer nav ol li:first-child:before { content: '🧭 : '; }
+      footer nav ol li a:after { content: ' > '; }
+      address { font-style: normal; }
+      address, dl { padding-left: 1em; }
+      dd + dd { margin-left: 1em; }
+      dd + dt { margin-top: 1em; }
+      dt + dd { margin-left: 0em; }
+      dd + dd:before { content: '- '; }
