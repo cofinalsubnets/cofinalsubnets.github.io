@@ -1,7 +1,7 @@
 body {
   background: #fcf;
   line-height: 1.4em;
-  font-family: 'Courier New', monospace, sans-serif; }
+  font-family: monospace, sans-serif; }
 
 a, a:visited { color: black; }
 a:hover { text-decoration: none; background-color: #dde; }
@@ -12,15 +12,17 @@ h5 { font-size: 1.1em; } h6 { font-size: 1.05em; }
 
 ul > li { list-style-type: '- '; }
 
-.paper, footer nav ol {
-  background: #eef;
-  box-shadow: 0.5em 0.5em 2px 1px rgba(0, 0, 0, .1); }
-.paper {
-  margin: 1em auto;
-  padding: 3em;
-  max-width: 48em; }
+@media not print {
+  .paper, footer nav ol {
+    background: #eef;
+    box-shadow: 0.5em 0.5em 2px 1px rgba(0, 0, 0, .1); }
+  .paper {
+    margin: 1em auto;
+    padding: 3em;
+    max-width: 48em; }
+  .paper > h1:first-child { margin-top: 0px; } }
 
-.paper > h1:first-child { margin-top: 0px; }
+@media print { footer nav { display: none; } }
 
 footer nav {
   padding: 0em;

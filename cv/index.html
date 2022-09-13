@@ -3,62 +3,89 @@
   <head>
     <meta charset="utf-8"/>
     <title>Gwen Whelan</title>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link rel="icon" type="image/png" href="../favicon.png"/>
-    <link rel="stylesheet" href="../style.css"/>
-    <style>
+    <style type="text/css">
+      h1, h2 { margin-bottom: 0em; }
+      .inner { padding-left: 1em; }
+      h1 + .inner, h2 + .inner { margin-top: 0.67em; }
+      ul > li { list-style-type: none; }
+      ul > li:before { content: '- '; }
       address { font-style: normal; }
-      address, dl { padding-left: 1em; }
-      dd + dd { margin-left: 1em; }
-      dd + dt { margin-top: 1em; }
-      dt + dd { margin-left: 0em; }
-      dd + dd:before { content: '- '; }
+      #work ul { padding-left: 0em; margin-top: 0em; }
     </style>
   </head>
 
   <body>
-    <main class="paper">
-      <h1>Gwen Whelan</h1>
-      <address>
-        <a href="https://gw000.github.io">https://gw000.github.io</a><br/>
-        <a href="mailto:gwendolyn.whelan@gmail.com">gwendolyn.whelan@gmail.com</a><br/>
-        <a href="tel:+1-215-800-8047">1-215-800-8047</a><br/>
-      </address>
+    <main id="cv" class="paper">
+      <header>
+        <h1>Gwen Whelan</h1>
+        <address class="inner">
+          <a href="https://gw000.github.io">https://gw000.github.io</a><br/>
+          <a href="mailto:gwendolyn.whelan@gmail.com">gwendolyn.whelan@gmail.com</a><br/>
+          <a href="tel:+1-215-800-8047">1-215-800-8047</a><br/>
+        </address>
+      </header>
 
-      <h2>Skills</h2>
-      <ul>
-        <li>Full-stack software engineering in most languages</li>
-        <li>Programming language design and development</li>
-        <li>Vegan/vegetarian cooking and baking</li>
-        <li>Food and beverage counter service</li>
-      </ul>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="inner">
+          <li>Full-stack software engineering in most languages</li>
+          <li>Programming language design and development</li>
+          <li>Low-level embedded and systems programming</li>
+          <li>Vegan/vegetarian cooking and baking</li>
+        </ul>
+      </section>
 
-      <h2>Experience</h2>
-      <dl>
-        <dt><strong>Oso Security LLC</strong>, New York, NY</dt>
-        <dd>8/2021 - 6/2022: Software Engineer</dd>
-        <dd>Developed Polar, a custom relational language written in Rust</dd>
-        <dd>Rewrote Polar, improving performance and reducing code size by ~30x</dd>
-        <dd>Designed a portable interface for fast pre-authorized data retrieval</dd>
+      <section id="tools">
+        <h2>Languages & Tools</h2>
+        <ul class="inner">
+          <li>Rust, C, Lisp, JS/TypeScript, Ruby, Python, Haskell, Java, Scala, Go</li>
+          <li>SQL, GraphQL, HTML, CSS, Node.js, React, Redux</li>
+          <li>Git, GDB, Vim, shell scripting, Linux/Unix</li>
+        </dl>
+      </section>
 
-        <dt><strong>Perelandra Natural Food Center LLC</strong>, Brooklyn, NY</dt>
-        <dd>9/2017 - 7/2021: Pastry Lead</dd>
-        <dd>Produced 100s of units/day of muffins, cookies, and other desserts</dd>
-        <dd>Created delicious new recipes using organic plant-based ingredients</dd>
-        <dd>Operated the juice bar, serving custom smoothies and other beverages</dd>
-        <dd>Cleaned and maintained all equipment and ordered supplies</dd>
+      <section id="work">
+        <h2>Experience</h2>
+        <div class="inner">
+          <strong>Oso Security LLC</strong>, New York, NY<br/>
+          8/2021 - 6/2022: Software Engineer<br/>
+          <ul>
+            <li>Developed Polar, a Prolog-like relational language written in Rust</li>
+            <li>Led a rewrite of Polar, reducing code size by ~30x</li>
+            <li>Architected a portable API for fast pre-authorized data retrieval</li>
+          </ul>
+        </div>
 
-        <dt><strong>Sefaira Inc.</strong>, New York, NY</dt>
-        <dd>3/2014 - 10/2015: Software Engineer</dd>
-        <dd>Created green building design tools using Scala, JS and Ruby</dd>
-        <dd>Developed tools for daylight visualization and HVAC energy analysis</dd>
-        <dd>Designed user interfaces to back end simulation services</dd>
-      </dl>
+        <div class="inner">
+          <strong>Perelandra Natural Food Center LLC</strong>, Brooklyn, NY<br/>
+          9/2017 - 7/2021: Pastry Lead<br/>
+          <ul>
+            <li>Produced 100s of units/day of muffins, cookies, and other desserts</li>
+            <li>Created delicious new recipes using organic plant-based ingredients</li>
+            <li>Operated the juice bar, serving custom smoothies and other beverages</li>
+            <li>Cleaned and maintained all equipment and ordered supplies</li>
+          </ul>
+        </div>
 
-      <h2>Education</h2>
-      <ul>
-        <li>B.A. Math, 2012, CUNY Brooklyn College, Brooklyn, NY</li>
-        <li>A.S. Math, 2010, CUNY BMCC, New York, NY</li>
-      </ul>
+        <div class="inner">
+          <strong>Sefaira Inc.</strong>, New York, NY<br/>
+          3/2014 - 10/2015: Software Engineer<br/>
+          <ul>
+            <li>Created green building design tools using Scala, JS and Ruby</li>
+            <li>Developed tools for daylight visualization and HVAC energy analysis</li>
+            <li>Designed user interfaces to back end simulation services</li>
+          </ul>
+        </div>
+      </section>
+      <section id="school">
+        <h2>Education</h2>
+        <ul class="inner">
+          <li>B.A. Math, 2012, CUNY Brooklyn College, Brooklyn, NY</li>
+          <li>A.S. Math, 2010, CUNY BMCC, New York, NY</li>
+        </ul>
+      </section>
     </main>
     <footer><nav><ol>
       <li><a href="./..">🛖</a></li>
