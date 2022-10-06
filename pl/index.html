@@ -24,9 +24,11 @@
       </p>
       <h2><a href="https://github.com/gw000/shimmre">Shimmre</a> (2014)</h2>
       <p>
-        a self-hosting parser generator language written in CoffeeScript, for some reason! inspired by Ometa.
-        you would write a grammar in Shimmre and provide transformation rules in a host language, and Shimmre
-        would generate host language code. it had JavaScript and Ruby backends. 
+        a self-hosting parser generator language written in CoffeeScript, for some reason. inspired by
+        <a href="https://en.wikipedia.org/wiki/OMeta">OMeta</a>. you would write a grammar in Shimmre and
+        provide transformation rules in a host language, and Shimmre would generate host language code. it had
+        JavaScript and Ruby backends. my first "compiled" language, imo still pretty cool. i'll probably rewrite
+        it in plain JS one of these days.
       </p>
       <h2><a href="https://github.com/gw000/gus">Gus</a> (2015)</h2>
       <p>
@@ -41,18 +43,18 @@
       </p>
       <h2><a href="https://github.com/gw000/lisa">Lisa</a> (2020)</h2>
       <p>
-        aka Lips. originally meant to be an experiment in FORTH-like languages, it turned into another Lisp written
-        in C, but this time with much cooler features: copying garbage collection, a self-hosting threaded code
-        compiler, actual compile-time macros, and a very stripped-down syntax based on just 5 special forms.
-        still in development!
+        aka Lips. originally meant to be an experimental FORTH-like stack-centric concatenative language, it turned into another
+        Lisp written in C, but this time with much cooler features: copying garbage collection, a self-hosting threaded code
+        compiler, actual compile-time macros, and a very stripped-down syntax based on just 5 special forms. still in
+        development.
       </p>
       <h2><a href="https://github.com/gw000/lisa/blob/main/test/k2.la">K2</a> (2022)</h2>
       <p>
         a microKanren derivative written in Lisa that came out of my research into relational languages at Oso. being based on
-        microKanren it's obviously extremely minimal. the main innovation is to represent result streams uniformly as
-        Church-encoded lists, which removes a layer of runtime reflection; on the other hand it creates a lot more closures,
-        so the performance picture is complicated. even so i think it's a very aesthetic approach to take! it would be much
-        less tolerable in Scheme, but Lisa's lambda syntax is so clean it's basically transparent.
+        microKanren it's very minimal. the main innovation is to represent result streams uniformly as Church-encoded lists,
+        which removes a layer of runtime reflection; on the other hand it creates more closures, so the performance benefit isn't
+        that big. even so i think it's a very aesthetic approach to take! it would be much less tolerable in Scheme, but
+        Lisa's lambda syntax is so clean it's basically transparent.
       </p>
     </main>
     <footer><nav><ol>
