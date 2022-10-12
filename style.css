@@ -40,5 +40,5 @@ footer nav ol li a:after { content: ' > '; }
   .paper {
     margin: 1em auto;
     padding: 3em;
-    max-width: 48em; }
+    max-width: 60%; }
   .paper > h1:first-child { margin-top: 0px; } }
