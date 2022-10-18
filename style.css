@@ -29,7 +29,7 @@ footer nav ol li {
 
 footer nav a { text-decoration: none; }
 footer nav a:hover { background-color: #eef; }
-footer nav ol li:first-child:before { content: '🧭 : '; }
+/*footer nav ol li:first-child:before { content: '🧭 : '; }*/
 footer nav ol li a:after { content: ' > '; }
 
 @media print { footer nav { display: none; } }

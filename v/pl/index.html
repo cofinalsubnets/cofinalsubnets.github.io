@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>programming languages</title>
+    <link rel="stylesheet" href="../../style.css"/>
+    <link rel="icon" type="image/png" href="../../favicon.png"/>
+  </head>
+
+  <body>
+    <main class="paper">
+      <h1>programming languages 💻</h1>
+      <p>
+        Programming languages are a big hobby of mine! Here's a few that I made:
+      </p>
+      <h2><a href="https://github.com/gw000/wisp">Wisp</a> (2013)</h2>
+      <p>
+        My first real Lisp! Written in Haskell during the Winter 2013 batch at
+        <a href="https://www.recurse.com">Recurse Center</a> (at the time called Hacker School).
+        I had already messed around a little bit with Common Lisp due to
+        <a href="http://stumpwm.github.io/">StumpWM</a> and had just been introduced to
+        <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">SICP</a>.
+        Wisp was intended to be the scripting language for a player-programmable MUD I was writing,
+        but it quickly became the focus of the project. Semantically it's a fairly standard Lisp-1,
+        but the implementation is a little odd since (a) it's in Haskell, (b) it runs inside a text-based
+        multiplayer game, and (c) I had no idea what I was doing! One slightly unusual feature though was
+        automatic currying.
+      </p>
+      <h2><a href="https://github.com/gw000/shimmre">Shimmre</a> (2014)</h2>
+      <p>
+        A self-describing parser generator language inspired by <a href="https://en.wikipedia.org/wiki/OMeta">OMeta</a>
+        and written as a blog post in literate CoffeeScript (because at my last job the CTO said CoffeeScript was the
+        future; I guess the subsequent explosion of languages-that-compile-to-JavaScript proved him sort of right).
+        You would write a grammar in Shimmre and provide transformation rules in a host language, and Shimmre would
+        generate host language code. It had working JavaScript and Ruby backends. Shimmre was my first "compiled"
+        language, and IMO it's still kind of cool. I'll probably rewrite it in plain JS one of these days.
+      </p>
+      <h2><a href="https://github.com/gw000/gus">Gus</a> (2015)</h2>
+      <p>
+        I wanted to write another Lisp, in C this time. Gus is a single-C-file Lisp interpreter named after
+        a coworker's cute dog. It uses a mark-and-sweep garbage collector that I more or less copied
+        conceptually from Ian Piumarta's <a href="https://piumarta.com/software/maru/">Maru</a>.
+      </p>
+      <h2><a href="https://github.com/gw000/mattie">Mattie</a> (2016)</h2>
+      <p>
+        Kind of a weird experimental string-centric esolang, based on parsing expression grammars, like Shimmre.
+        Mattie (named after <a href="../../an/mattie.html">my dear cat</a>) was written in Scheme with a syntax based on
+        Shimmre's metagrammar. It's entirely based around transforming strings. One of those languages that makes
+        you go "is this really Turing complete?"
+      </p>
+      <h2><a href="https://github.com/gw000/lisa">Lisa</a> (2020)</h2>
+      <p>
+        Also known as Lips. Originally written as a FORTH-like stack language, it turned into another Lisp written in C,
+        but this time with much cooler features: copying garbage collection, a self-hosting threaded code compiler,
+        actual compile-time macros, and a stripped-down syntax based on just 5 special forms. Still in development.
+      </p>
+      <h2><a href="https://github.com/gw000/lisa/blob/main/test/k2.la">K2</a> (2022)</h2>
+      <p>
+        A <a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf">microKanren</a> derivative written in Lisa
+        that came out of my research into relational languages at Oso. Being based on microKanren it's very minimal. The main
+        innovation is to represent result streams uniformly as Church-encoded lists, which removes a layer of runtime
+        reflection; on the other hand it creates more closures, so the performance picture is unclear. Even so i think it's a
+        very aesthetic approach to take! It would be less tolerable in Scheme, but Lisa's lambda syntax is so clean it's
+        basically transparent. The heart of Lisa's type checker, as soon as I get around to writing it 😅
+      </p>
+    </main>
+    <footer><nav><ol>
+      <li><a href="../..">🛖</a></li>
+      <li><a href="..">🪞</a></li>
+      <li>💻</li>
+    </ol></nav></footer>
+  </body>
+</html>
