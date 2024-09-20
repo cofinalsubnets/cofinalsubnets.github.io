@@ -1,5 +1,6 @@
 :root { --bg: #ddd; --fg: #222; }
 * { line-height: 1.4em; font-family: monospace,sans-serif; }
-body { margin: 1em; background: var(--bg); color: var(--fg); }
+body { margin: 1em; max-width: 60em; background: var(--bg); color: var(--fg); }
 a:hover { text-decoration: none; }
 ul > li { list-style-type: "— "; }
+ul { padding-left: 2em; }
