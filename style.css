@@ -1,4 +1,4 @@
-:root { --bg: #ddd; --fg: #222; }
+:root { --bg: hsl(160, 90%, 80%); --fg: #222; }
 * { line-height: 1.4em; font-family: monospace,sans-serif; }
 body { margin: 1em; max-width: 60em; background: var(--bg); color: var(--fg); }
 a:hover { text-decoration: none; }
