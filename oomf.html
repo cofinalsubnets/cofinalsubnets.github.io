@@ -35,7 +35,7 @@
           angularVelocity = 2 * PI * refreshPeriod / orbitalPeriod;
         const animateOomfie = () => {
           const x = floor(cos(angle) * orbitalRadius), y = floor(sin(angle) * orbitalRadius);
-          document.getElementById('oomfie').style.setProperty('transform', `translate(${x}px, ${y}px) rotate(${angle + PI/2}rad)`);
+          document.getElementById('oomfie').style.setProperty('transform', `translate(${x}px, ${y}px) translate(-50%,-50%) rotate(${angle + PI/2}rad)`);
           angle -= angularVelocity;
         };
         setInterval(animateOomfie, refreshPeriod);
