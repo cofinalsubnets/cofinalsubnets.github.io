@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oomf</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      #oomf {
+        font-size: 48px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+      }
+      #oomfie {
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+      }
+    </style>
+    <script>
+      window.addEventListener('load', () => {
+        let angle = 0; // radians
+        const
+          { PI, cos, sin, floor } = Math,
+          orbitalRadius = 100, // pixels
+          refreshPeriod = 10, // milliseconds
+          orbitalPeriod = 3000, // milliseconds
+          angularVelocity = 2 * PI * refreshPeriod / orbitalPeriod;
+        const animateOomfie = () => {
+          const x = floor(cos(angle) * orbitalRadius), y = floor(sin(angle) * orbitalRadius);
+          document.getElementById('oomfie').style.setProperty('transform', `translate(${x}px, ${y}px) rotate(${angle + PI/2}rad)`);
+          angle -= angularVelocity;
+        };
+        setInterval(animateOomfie, refreshPeriod);
+      });
+    </script>
+    <script src="/color.js"></script>
+  </head>
+  <body>
+    <div id="oomf">🐱</div>
+    <div id="oomfie">🐀</div>
+  </body>
+</html>
