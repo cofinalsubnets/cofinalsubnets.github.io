@@ -9,7 +9,6 @@ window.addEventListener("load", () => {
     // limit updates to about 60/s
     window.removeEventListener("mousemove", colorize);
     window.setTimeout(() => window.addEventListener("mousemove", colorize), 17);
-
     const // compute hsl
       { innerWidth: width, innerHeight: height} = window, // X Y dimension of window
       diag = sqrt(width**2 + height**2),                  // diagonal length
@@ -20,9 +19,8 @@ window.addEventListener("load", () => {
       lit = 80 + 80 * dist / diag,                        // lightness <- distance from last event
       sat = 30 + 120 * sqrt(x1**2 + y1**2) / diag,        // saturation <- distance from origin
       hsl = `hsl(${hue},${sat}%,${lit}%)`;                // hsl css parameter value string
-
     // set color and last event coordinates
-    document.querySelector(':root').style.setProperty('--bg', hsl);
+    document.body.style.setProperty('background', hsl);
     lastX = x, lastY = y;
   };
 
