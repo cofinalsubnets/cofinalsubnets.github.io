@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+if (navigator.maxTouchPoints == 0) window.addEventListener("load", () => {
   const { atan2, floor, sqrt, random, PI } = Math;
 
   let lastX = floor(random() * window.innerWidth),

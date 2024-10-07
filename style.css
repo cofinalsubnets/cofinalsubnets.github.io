@@ -1,5 +1,5 @@
 * { line-height: 1.4em; font-family: monospace,sans-serif; }
-body { margin: 1em; max-width: 60em; background: hsl(200, 90%, 80%); color: #222; }
+body { margin: 1em; max-width: 60em; background: hsl(220, 90%, 80%); color: #222; }
 a:hover { text-decoration: none; }
 ul > li { list-style-type: "— "; }
 ul { padding-left: 2em; }
